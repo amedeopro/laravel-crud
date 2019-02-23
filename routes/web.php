@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/works', 'WorkController');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
