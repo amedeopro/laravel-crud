@@ -18,13 +18,23 @@ class WorkController extends Controller
 
     public function create()
     {
-        //
+        return view('works.create');
     }
 
 
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newWork = new Work();
+        $newWork ->cliente = $data['cliente'];
+        $newWork ->lavoro = $data['lavoro'];
+        $newWork ->assegnazione = $data['assegnazione'];
+
+        $newWork->save();
+
+        return 'ok';
+
     }
 
 
