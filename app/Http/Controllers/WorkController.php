@@ -39,7 +39,7 @@ class WorkController extends Controller
     }
 
 
-    public function show($id)
+    public function show($id) // avrei potuto passare come parametro User $user e avrei potuto cancellare $work = Work::find($id);
     {
 
         $work = Work::find($id); //find funziona solo ed esclusivamente per l'id
