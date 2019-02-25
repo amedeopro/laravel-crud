@@ -31,7 +31,11 @@
                 <td>{{ $work->assegnazione }}</td>
                 <td><a href="{{ route('works.show', $work->id) }}" class="btn btn-info">Visualizza</a></td>
                 <td><a href="{{ route('works.edit', $work->id)}}" class="btn btn-warning">Modifica</a></td>
-                <td><a href="#" class="btn btn-danger">Elimina</a></td>
+                <td> <form action="{{route('works.destroy', $work->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <input type="submit" class="btn btn-danger" value="Elimina">
+                </form> </td>
               </tr>
             @endforeach
           </tbody>

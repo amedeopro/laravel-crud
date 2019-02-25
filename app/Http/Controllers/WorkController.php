@@ -83,6 +83,8 @@ class WorkController extends Controller
 
     public function destroy($id)
     {
-        //
+        $work = Work::find($id);
+        $work->delete();
+        return redirect()->back();
     }
 }
