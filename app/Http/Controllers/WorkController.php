@@ -27,13 +27,14 @@ class WorkController extends Controller
         $data = $request->all();
 
         $newWork = new Work();
+        // $newWork = fill($data); questo e' piu' veloce ma salva anche il token quindi nel model inserisco protected $fillable = ['cliente','lavoro','assegnazione']; quindi solo i campi che deve inserire
         $newWork ->cliente = $data['cliente'];
         $newWork ->lavoro = $data['lavoro'];
         $newWork ->assegnazione = $data['assegnazione'];
 
         $newWork->save();
 
-        return 'ok';
+        return redirect()->route('works.index');
 
     }
 
