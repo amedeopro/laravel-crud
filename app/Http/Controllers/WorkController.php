@@ -41,11 +41,13 @@ class WorkController extends Controller
 
     public function show($id)
     {
-        
+
         $work = Work::find($id); //find funziona solo ed esclusivamente per l'id
         if (empty($work)) {
           return abort(404);
         }
+
+        return view('works.show', compact('work'));
         //metodo piu' lungo
         // $works = Work::all();
         //
