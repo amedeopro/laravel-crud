@@ -63,13 +63,21 @@ class WorkController extends Controller
 
     public function edit($id)
     {
-        //
+      $work = Work::find($id);
+      if (empty($work)) {
+        return abort(404);
+      }
+      return view('works.edit', compact('work'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Work $work)
     {
-        //
+        $data = $request->all();
+
+        $user->update($data);
+
+        return redirect()->back();
     }
 
 

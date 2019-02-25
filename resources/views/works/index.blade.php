@@ -30,7 +30,7 @@
                 <td>{{ $work->lavoro }}</td>
                 <td>{{ $work->assegnazione }}</td>
                 <td><a href="{{ route('works.show', $work->id) }}" class="btn btn-info">Visualizza</a></td>
-                <td><a href="#" class="btn btn-warning">Modifica</a></td>
+                <td><a href="{{ route('works.edit', $work->id)}}" class="btn btn-warning">Modifica</a></td>
                 <td><a href="#" class="btn btn-danger">Elimina</a></td>
               </tr>
             @endforeach
