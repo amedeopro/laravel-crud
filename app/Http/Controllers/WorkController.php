@@ -75,7 +75,7 @@ class WorkController extends Controller
     {
         $data = $request->all();
 
-        $user->update($data);
+        $work->update($data);
 
         return redirect()->back();
     }

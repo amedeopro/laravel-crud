@@ -7,7 +7,7 @@
 
       <div class="col-12">
         <h1>Aggiorna lavoro: {{ $work->lavoro}} del cliente {{ $work->cliente}} </h1>
-        <form class="form-group" action="{{ route('works.update', $user->id) }}" method="post">
+        <form class="form-group" action="{{ route('works.update', $work->id) }}" method="post">
 
           @method('PUT')
           @csrf
