@@ -50,15 +50,23 @@ class UserController extends Controller
     }
 
 
-    public function edit(User $user)
+    public function edit($id)
     {
-        //
+      $user = User::find($id);
+      if (empty($user)) {
+        return abort(404);
+      }
+      return view('users.edit', compact('user'));
     }
 
 
     public function update(Request $request, User $user)
     {
-        //
+      $data = $request->all();
+
+      $user->update($data);
+
+      return redirect()->route('users.index');
     }
 
 
