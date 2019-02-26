@@ -13,7 +13,7 @@
 
           <div class="form-group">
             <label for="name">Nome</label>
-            <input type="text" name="name" class="form-control" placeholder="Inserisci il nome del cliente" value="{{$user->name}}">
+            <input type="text" name="name" class="form-control" placeholder="Inserisci il nome" value="{{$user->name}}">
           </div>
 
           <div class="form-group">
@@ -23,12 +23,12 @@
 
           <div class="form-group">
             <label for="age">Eta'</label>
-            <input type="textarea" name="age" class="form-control" placeholder="Inserisci cognome" value="{{$user->age}}">
+            <input type="textarea" name="age" class="form-control" placeholder="Inserisci eta'" value="{{$user->age}}">
           </div>
 
           <div class="form-group">
             <label for="cf">Codice Fiscale</label>
-            <input type="textarea" name="cf" class="form-control" placeholder="Inserisci cognome" value="{{$user->cf}}">
+            <input type="textarea" name="cf" class="form-control" placeholder="Inserisci codice fiscale" value="{{$user->cf}}">
           </div>
 
 

@@ -10,27 +10,27 @@
           @csrf
           <div class="form-group">
             <label for="name">Nome</label>
-            <input type="text" name="name" class="form-control" placeholder="Inserisci il nome del cliente">
+            <input type="text" name="name" class="form-control" placeholder="Inserisci il nome ">
           </div>
 
           <div class="form-group">
             <label for="lastname">Cognome</label>
-            <input type="textarea" name="lastname" class="form-control" placeholder="Inserisci descrizione lavoro da svolgere">
+            <input type="textarea" name="lastname" class="form-control" placeholder="Inserisci cognome">
           </div>
 
           <div class="form-group">
             <label for="age">Eta'</label>
-            <input type="textarea" name="age" class="form-control" placeholder="Inserisci descrizione lavoro da svolgere">
+            <input type="textarea" name="age" class="form-control" placeholder="Inserisci eta'">
           </div>
 
           <div class="form-group">
             <label for="cf">Codice Fiscale</label>
-            <input type="textarea" name="cf" class="form-control" placeholder="Inserisci descrizione lavoro da svolgere">
+            <input type="textarea" name="cf" class="form-control" placeholder="Inserisci codice fiscale">
           </div>
 
 
           <div class="form-group">
-            <input type="submit" class="form-control" value="Inserisci nuovo lavoro">
+            <input type="submit" class="form-control" value="Inserisci nuovo utente">
           </div>
 
         </form>
