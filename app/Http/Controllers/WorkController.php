@@ -26,6 +26,11 @@ class WorkController extends Controller
     {
         $data = $request->all();
 
+        // controllare la validazione
+        $validatedData = $request->validate([
+        'cliente' => 'required|unique:posts|max:255',
+       ]);
+
         $newWork = new Work();
         // $newWork = fill($data); questo e' piu' veloce ma salva anche il token quindi nel model inserisco protected $fillable = ['cliente','lavoro','assegnazione']; quindi solo i campi che deve inserire
         $newWork ->cliente = $data['cliente'];

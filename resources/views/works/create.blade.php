@@ -7,6 +7,15 @@
 
       <div class="col-12">
         <h1>Aggiungi lavoro</h1>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form class="form-group" action="{{ route('works.store') }}" method="post">
           @csrf
           <div class="form-group">
