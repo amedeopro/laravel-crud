@@ -10,7 +10,7 @@ class WorkController extends Controller
 
     public function index()
     {
-      $works = Work::all();
+      $works = Work::paginate();
 
       return view('works.index', compact('works'));
     }

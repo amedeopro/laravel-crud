@@ -8,7 +8,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1>Questi sono tutti i lavori da svolgere <a href="{{ route('works.create')}}" class="btn btn-primary">Aggiungi un nuovo lavoro</a></h1>
+        <h1>Questi sono tutti i lavori da svolgere <a href="{{ route('works.create')}}" class="btn btn-primary">Aggiungi un nuovo lavoro</a></h1> {{ $works->links() }}
 
         <table class="table">
           <thead class="thead-dark">
@@ -40,6 +40,7 @@
             @endforeach
           </tbody>
         </table>
+        {{ $works->links() }}
       </div>
 
     </div>
